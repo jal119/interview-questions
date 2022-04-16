@@ -17,15 +17,14 @@ IAC or Infrastructure as Code allows you to build, change, and manage your infra
 4. What are the most useful Terraform commands?
 Some of the most useful Terraform commands are:
 
-terraform init - initializes the current directory
-terraform refresh - refreshes the state file
-terraform output - views Terraform outputs
-terraform apply - applies the Terraform code and builds stuff
-terraform destroy - destroys what has been built by Terraform
-terraform graph - creates a DOT-formatted graph
-terraform plan - a dry run to see what Terraform will do
-Free Azure Fundamentals Course
-Master Azure Basics in One GoENROLL NOWFree Azure Fundamentals Course
+- terraform init - initializes the current directory
+- terraform refresh - refreshes the state file
+- terraform output - views Terraform outputs
+- terraform apply - applies the Terraform code and builds stuff
+- terraform destroy - destroys what has been built by Terraform
+- terraform graph - creates a DOT-formatted graph
+- terraform plan - a dry run to see what Terraform will do
+
 
 5. Are callbacks possible with Terraform on Azure?
 By using the Azure Event Hubs, callbacks are probable on Azure. Terraform’s Azure supplier provides effortless functionality to users. Microsoft Azure Cloud Shell provides an already installed Terraform occurrence.
@@ -62,20 +61,25 @@ The version controls supported GitLab EE, GitLab CE, and Bucket cloud.
 15. Name some major competitors of Terraform?
 Some of the top competitors and alternatives to Terraform are Azure Management Tools, Morpheus, CloudHealth, Turbonomic, and CloudBolt.
 
-Next up, let us see some intermediate terraform interview questions!
 
-Intermediate Terraform Interview Questions
+
+# Terraform Interview Questions
+ 
 Explain the uses of Terraform CLI and list some basic CLI commands?
 16. Explain the uses of Terraform CLI and list some basic CLI commands?
 The Terraform Command-Line Interface (CLI) is used to manage infrastructure and interact with Terraform state, configuration files, providers, etc.
 
 Here are some basic CLI commands:
 
-terraform init - prepares your working directory for other commands
-terraform destroy - destroys the previously-created infrastructure
-terraform validate - check whether the configuration is valid
-terraform apply - creates or updates the infrastructure
-terraform plan - shows changes needed by the current configuration
+- terraform init - initializes the current directory
+- terraform refresh - refreshes the state file
+- terraform output - views Terraform outputs
+- terraform apply - applies the Terraform code and builds stuff
+- terraform destroy - destroys what has been built by Terraform
+- terraform graph - creates a DOT-formatted graph
+- terraform plan - a dry run to see what Terraform will do
+
+
 17. What are modules in Terraform?
 A jug for numerous resources that are used jointly is known as a module in Terraform. The root module includes resources mentioned in the .tf files and is required for every Terraform.
 
@@ -93,7 +97,9 @@ We can try the following options:
 
 Delete those resources from the cloud provider(API) and recreate them using Terraform
 Delete those resources from Terraform code to stop its management with it
+
 Carry out a terraform import of the resource and remove the code that is trying to recreate them
+
 22. Name all version controls supported by Terraform
 The supported version controls are:
 
@@ -106,6 +112,8 @@ Gitlab.com
 GitHub Enterprise
 GitHub.com (OAuth)
 GitHub.com
+
+
 23. What are some of the built-in provisioners available in Terraform?
 Here is the list of built-in provisioners in Terraform:
 
@@ -116,6 +124,8 @@ Local-exec Provisioner
 Habitat Provisioner
 File Provisioner
 Chef Provisioner
+
+
 24. Which command destroys Terraform managed infrastructure?
 The given command is used for this purpose:
 
@@ -131,6 +141,8 @@ Disposable environment creations
 Multi-tier applications development
 Self-service clusters
 Setup of Heroku App
+
+
 26. What are the components of Terraform architecture?
 The Terraform architecture includes the following features:
 
@@ -143,6 +155,8 @@ State Manager
 Configuration Loader
 CLI (Command Line interface)
 Backend
+
+
 27. Define Resource Graph in Terraform.
 A resource graph is a visual representation of the resources. It helps modify and create independent resources simultaneously. Terraform establishes a plan for the configuration of the graph to generate plans and refresh the state. It creates structure most efficiently and effectively to help us understand the drawbacks.
 
@@ -155,18 +169,21 @@ Review an audit trail for Terraform Cloud operations
 Forbid only certain resources, providers, or data sources
 Enforce mandatory tagging on resources 
 Restrict how modules are used in the Private Module Registry
+
+
 29. What are the various levels of Sentinel enforcement?
 Sentinel has three enforcement levels - advisory, soft mandatory, and hard mandatory.
 
 Advisory - Logged but allowed to pass. An advisory is issued to the user when they trigger a plan that violates the policy.
 Soft Mandatory - The policy must pass unless an override is specified. Only administrators have the ability to override.
 Hard Mandatory - The policy must pass no matter what. This policy cannot be overridden unless it is removed. It is the default enforcement level in Terraform.
+
+
 30. How to Store Sensitive Data in Terraform?
 Terraform requires credentials to communicate with your cloud provider's API. But most of the time, these credentials are saved in plaintext on your desktop. GitHub is exposed to thousands of API and cryptographic keys every day. Hence, your API keys should never be stored in Terraform code directly.  You should use encrypted storage to store all your passwords, TLS certificates, SSH keys, and anything else that shouldn't be stored in plain text.
 
-Next up, let us get started with the advanced terraform interview questions section!
+# Terraform Interview Questions
 
-Advanced Terraform Interview Questions
 31. What is Terragrunt, and what are its uses?
 Terragrunt is a thin wrapper that provides extra tools to keep configurations DRY, manage remote state and work with multiple Terraform modules. It is used for:
 
@@ -211,8 +228,7 @@ tags {
 
  Name = "example"}
 
-Give Your Career The Edge
-Learn in-demand skills and concepts for FREESTART LEARNINGGive Your Career The Edge
+
 37. How will you upgrade plugins on Terraform?
 Run ‘terraform init’ with ‘-upgrade’ option. This command rechecks the releases.hashicorp.com to find new acceptable provider versions. It also downloads available provider versions. “.terraform/plugins/<OS>_<ARCH>” is the automatic downloads directory.
 
@@ -222,6 +238,8 @@ Declare the output variable of module_A.
 Create a file variable.tf for module B.
 Establish the input variable inside this file having the same name as the key defined in module_B.
 Replicate the process for making variable available to other modules
+
+
 39. What are some of the latest Terraform Azure Provider factors?
 The latest versions involve new data resources and Azurem_batch_certificate, which helps in managing the certificate. This resource is used for controlling the prefix in networking. There is fixing of bugs, and azurerm_app_service has also been enhanced.
 
