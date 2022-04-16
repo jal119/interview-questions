@@ -26,131 +26,184 @@ Ans: It is possible using Amazon VPC Flow-Logs feature.
 
 Q9: Difference between Security Groups and ACLs in a VPC?
 Ans: A Security Group defines which traffic is allowed TO or FROM  EC2 instance. Whereas ACL, controls at the SUBNET level, scrutinize the traffic TO or FROM a Subnet.
+
 Q10: Hon an EC2 instance in a VPC establish the connection with the internet?
 Ans: Using either a Public IP or an Elastic IP.
+
 Q11: Different types of Cloud Computing as per services?
 Ans:  PAAS (Platform As A Service), IAAS (Infrastructure As A Service), SAAS (Software As A Service)
+
 Q12: What is Auto Scaling?
 Ans: Creating duplicate instances during heavy business hours. Scale-IN and Scale-OUT are two different statues of Scaling. Scale-IN: Reducing the instances. Scale-OUT: Increasing the instances by duplicating.
+
 Q13: What is AMI?
 Ans: AMI is defined as Amazon Machine Image. Basically it’s a template comprising software configuration part. For example, Operating System, DB Server, Application Server, etc.,
+
 Q14: Difference between Stopping and Terminating the Instances?
 Ans: When you STOP an instance it is a normal shutdown. The corresponding EBS volume attached to that instance remains attached and you can restart the instance later. When you TERMINATE an instance it gets deleted and you cannot restart that instance again later. And any EBS volume attached with that instance also deleted.
+
 Q15: When you launch a standby Relational Database Service instance will it be available in the same Available Zone?
 Ans: Not advisable. Because the purpose of having standby RDS  instance is to avoid an infrastructure failure. So you have to keep your standby RDS service in a different Availability Zone, which may have different infrastructure.
+
 Q16: Difference between Amazon RDS, DynamoDB and Redshift?
 Ans: RDS is meant for structured data only. DynamoDB is meant for unstructured data which is a NoSQL service. Redshift is a data warehouse product used for data analysis.
+
 Q17: What are Lifecycle Hooks?
 Ans: Lifecycle Hooks are used in Auto Scaling. Lifecycle hooks enable you to perform custom actions by pausing instances as an Auto Scaling group launches or terminates them. Each Auto Scaling group can have multiple lifecycle hooks.
+
 Q18: What is S3?
 Ans: S3 stands for Simple Storage Service, with a  simple web service interface to store and retrieve any amount of data from anywhere on the web.
+
 Q19: What is AWS Lambada?
 Ans: Lambda is an event-driven platform. It is a compute service that runs code in response to events and automatically manages the compute resources required by that code.
+
 Q20: In S3 how many buckets can be created?
 Ans: By default 100 buckets can be created in a region.
+
 Q21: What is CloudFront?
 Ans: Amazon CloudFront is a service that speeds up transfer of your static and dynamic web content such as HTML files, IMAGE files., etc., CloudFront delivers your particulars thru worldwide data centers named Edge Locations.
+
 Q22: Brief about S3 service in AWS?
 Ans: S3, a Simple Storage Service from Amazon. You can move your files TO and FROM S3. Its like a FTP storage. You can keep your SNAPSHOTS in S3. You can also ENCRYPT your sensitive data in S3.
+
 Q23: Explain Regions and Available Zones in EC2?
 Ans: Amazon has hosted EC2 in various locations around the world. These locations are called REGIONS. For example in Asia, Mumbai is one region and Singapore is another region. Each region is composed of isolated locations which are known as AVAILABLE ZONES.    Region is independent. But the Available Zones are linked thru low-latency links.
+
 Q24: What are the two types of Load Balancer?
 Ans: Classic LB and Application LB. ALB is the Content Based Routing.
+
 Q25: Can a AMI be shared?
 Ans: Yes. A developer can create an AMI and share it with other developers for their use. A shared AMI is packed with the components you need and you  can customize the same as per your needs. As you are not an owner of a shared AMI there is a risk always involved.
+
 Q26: What is a Hypervisor?
 Ans: A Hypervisor is a kind of software that enables Virtualization. It combines physical hardware resources into a platform which is delivered virtually to one or more users. XEN is the Hypervisor for EC2.
+
 Q27: Key Pair and its uses?
 Ans: You use Key Pair to login to your Instance in a secured way. You can create a key pair using EC2 console. When your instances are spread across regions you need to create key pair in each region.
+
 Q28: What is the feature of ClassicLink?
 Ans: ClassicLink allows instances in EC2 classic platform to communicate with instances in VPC using Private IP address. EC2 classic platform instances cannot not be linked to more than one VPC at a time.
+
 Q29: Can you edit a Route Table in VPC?
 Ans: Yes. You can always modify route rules to specify which subnets are routed to the Internet gateway, the virtual private gateway, or other instances.
+
 Q30: How many Elastic IPs can you create?
 Ans: 5 VPC Elastic IP addresses per AWS account per region
+
 Q31: Can you ping the router or default gateway that connects your subnets?
 Ans: NO, you cannot. It is not supported. However you can ping EC2 instances within a VPC, provided your firewall, Security Groups and network ACLs allows such traffic.
+
 Q32: How will you monitor the network traffic in a VPC?
 Ans: Using Amazon VPC Flow Logs feature.
+
 Q33: Can you make a VPC available in multiple Available Zones?
 Ans: Yes.
+
 Q34: How do you ensure an EC2 instance is launched in a particular Available Zone?
 Ans: After selecting your AMI Template and Instance Type, in the third step while configuring the instance you must select the SUBNET in which you wish to launch your instance. It will be launched in the AZ associated with that SUBNET.
+
 Q35: For Internet Gateways do you find any Bandwidth constraints?
 Ans: NO. Normally an IG is HORIZONTALLY SCALLED, Redundant and Highly Available. It is not having nay Bandwidth constraints usually.
+
 Q36: What is the significance of a Default VPC?
 Ans: When you launch your instances in a Default VPC in a Region, you would be getting the benefit of advanced Network Functionalities. You can also make use of Security Groups, multiple IP addresses, and multiple Network interfaces.
+
 Q37: Can you make use of default EBS Snapshots?
 Ans: You can use, provided if it is located in the same region where your VPC is presented.
+
 Q38: What will happen when you delete a PEERING CONNECTION in your side?
 Ans: The PEERING CONNECTION available in the other side would also get terminated. There will no more traffic flow.
+
 Q39: Can you establish a Peering connection to a VPC in a different region?
 Ans: NO. Its possible between VPCs in the same region.
+
 Q40: Can you connect your VPC with a VPC created by another AWS account?
 Ans: Yes. Only when that owner accepts your peering connection request.
+
 Q41: When you delete your DB instance what will happen to your backups and DB snapshots?
-Ans: When a DB instance is deleted, RDS retains the user-created DB snapshot along with all other manually created DB snapshots. Also automated backups are deleted and only manually created DB Snapshots are retained.
+Ans: When a DB instance is deleted, RDS retains the user-created DB snapshot along with all other manually created DB snapshots. Also automated backups are deleted and only manually
+ created DB Snapshots are retained.
+
 Q42: What is the significance of an Elastic IP?
 Ans: The Public IP is associated with the instance until it is stopped or terminated Only. A Public IP is not static. Every time your instance is stopped or terminated the associated Public IP gets vanished and a new Public IP gets assigned with that instance. To over come this issue a public IP can be replaced by an Elastic IP address, which stays with the instance as long as the user doesn’t manually detach it. Similarly when if you are hosting multiple websites on your EC2 server, in that case you may require more than one Elastic IP address.
+
 Q43: How will you use S3 with your EC2 instances?
 Ans: Websites hosted on your EC2 instances can load their static contents directly from S3. It provides highly scalable, reliable, fast, inexpensive data storage infrastructure.
+
 Q44: Is this possible to connect your company datacenter to Amazon Cloud?
 Ans: Yes, you can very well do this  by establishing a VPN connection between your company’s network and Amazon VPC.
+
 Q45: Can you change the Private IP of an EC2 instance while it is running or stopped?
 Ans: A Private IP is STATIC. And it is attached with an instance throughout is lifetime and cannot be changed.
+
 Q46: What is the use of Subnets?
 Ans: When a network has more number of HOSTS, managing these hosts can be tedious under a single large network. Therefore we divide this large network into easily manageable sub-networks (subnets) so that managing hosts under each subnet becomes easier.
+
 Q47: What is the use of Route Table?
 Ans: Route Table is used to route the network pockets. Generally one route table would be available in each subnet. Route table can have any no. of records or information, hence attaching multiple subnets to a route table is also possible.
+
 Q48: Can you use the Standby DB instance for read and write along with your Primary DB instance?
 Ans: Standby server cannot be used in parallel with primary server unless your Primary instance goes down.
+
 Q49: What is the use of Connection Draining?
 Ans: Connection Draining is a service under Elastic Load Balancing. It keeps monitoring the healthiness of the instances. If any instance fails Connection Draining pulls all the traffic from that particular failed instance and re-route the traffic to other healthy instances.
+
 Q50: What is the role of AWS CloudTrail?
 Ans: CloudTrail is designed for logging and tracking API calls. Also used to audit all S3 bucket accesses.
+
 Q51: What is the use of Amazon Transfer Acceleration Service?
 Ans: ATA service speeds up your data transfer with the use of optimized network paths. Also, speed up your CDN up to 300% compared to normal data transfer speed
+
 Q52: What is the name of AWS CEO or Chief ?
 Jeff Bezos
 Lisa Su
 Denise Morrison
 Ans: Jeff Bezos
+
 Q53: EC2 officially launch in …..
 2002
 2006
 2008
 Ans: 2006
+
 Q54: S3 Launched officially lunched in …..
 2002
 2006
 2008
 Ans: 2006
+
 Q55: You cannot store unlimited data in Amazon Web Services…..
 True
 False
 Ans: False
+
 Q56: Rapid provisioning allows you to very quickly spin up a new virtual machine with minimal effort. True or false ?
 True
 False
 Ans: True
+
 Q57: A hybrid setup is one in which part of your resources are AWS and the rest are with another cloud provider. True or False ?
 True
 False
 Ans: False
+
 Q58: As an added layer of security for AWS management, which of the following should be you do ?
 Create multiple Admin accounts
 Generate a new security key each time you log in
 Create IAM users
 Ans: Create IAM users
 EC2, Elastic Computing & Instances Types
+
 Q59: Is AMI template ?
 True
 False
 Ans: True
+
 Q60: EC2 Instances are Virtual Server in AWS
 True
 False
 Ans: True
+
 Q61: What does “elastic” refer to in Elastic Compute Cloud(EC2)? Select all that apply.
 Increasing and decreasing capacity as needed
 Monitoring services on multiple devices
@@ -158,262 +211,324 @@ Operating on Mac, Windows and Linux
 Paying only for running virtual machines
 Stretching applications across virtual machines
 Ans: 1. Increasing and decreasing capacity as needed & 4. Paying only for running virtual machines
+
 Q62: You can upload a custom configuration virtual image and sell it on the AWS Marketplace. True or false ?
 True
 False
 Ans: True
+
 Q63: EC2 Machine types define which of the following ?
 AWS Region
 Core Count
 User Location
 Ans: Core Count
+
 Q64: Which is default instance type
 On-demand
 RI
 Spot instance
 Ans: On-demand
+
 Q65: What is Elastic Computing ?
 Data will be replicate to different AZs
 You can spin up and spin down VMs
 Automatically VMs will be add and remove
 Ans: You can spin up and spin down VMs
+
 Q66: You can upload a custom configuration virtual image and sell it on the AWS Marketplace. True or false ?
+
 True
 False
 Ans: True
+
 Q67: EC2 Machine types define which of the following ?
 AWS Region
 Core Count
 User Location
 Ans: Core Count
+
 Q68: Which is default instance type
 On-demand
 RI
 Spot instance
 Ans: On-demand
+
 Q69: What is Elastic Computing ?
 Data will be replicate to different AZs
 You can spin up and spin down VMs
 Automatically VMs will be add and remove
 Ans: You can spin up and spin down VMs
+
 Q70: Can We launch multiple instances with same AMI ?
 True
 False
 Ans: True
+
 Q71: PEM file is one time physical password…
 True
 False
 Ans: True
+
 Q72: Windows user required PPK file to connect Linux instance hosted on AWS.
 True
 False
 Ans: True
+
 Q73: You can purchase time on EC2 directly from other users and specify the price you want to pay. True or false ?
 True
 False
 Ans: True
+
 Q74: Which of the following might prevent your EC2 instance from appearing in the list of instances?
 EC2 is not selected
 Correct region is not selected
 AWS marketplace is not selected
 Ans: Correct region is not selected
+
 Q75: Which of the following main reason to terminate an unused EC2 instance ?
 Security Concerns
 Additional fees
 Data Loss
 Ans: Additional fees
+
 Q76: Which AWS service exists only to redundantly cache data and images ?
 AWS Availability Zones
 AWS Edge Locations
 AWS Regions
 Ans: AWS Edge Locations
+
 Q77: Regions, AZs and Edge Locations all terms are same…
 True
 False
 Ans: False
+
 Q78: AWS every service is available at every regions….
 True
 False
 Ans: False
+
 Q79: Premium support is Available in AWS for Developer, Business & Enterprise level ?
 True
 False
 Ans: True
+
 Q80: Can you add new Debit/Credit card in your AWS Account ?
 True
 False
 Ans: True
+
 Q81: Can you increase micro to large of instance ?
 True
 False
 Ans: True
+
 Q82: On-demand instances is based on a bid mechanism.
 True
 False
 Ans: False
+
 Q83: RI can be sold on the AWS marketplace?
 True
 False
 Ans: True
+
 Q84: Which is default types options in AWS?
 On-demand
 RI
 Spot instance
 Ans: On-demand
+
 Q85: What are On-demand, RI and Spot instances ? Which instance is best on Production?
 On-demand
 RI
 Depends on Application or Website
 Ans:  Depends on Application or Website
+
 Q86: Which is most expensive options in instance ?
 On-demand
 RI
 Spot instance
 Ans: On-demand
+
 Q87: Amazon S3 is internet accessible storage via HTTP /HTTPS
 True
 False
 Ans: True
+
 Q88: Amazon S3 is not a object level of storage
 True
 False
 Ans: False
+
 Q89: Amazon S3 is storage for the Internet
 True
 False
 Ans: True
+
 Q90: Temporary storage access speed is not guaranteed.
 True
 False
 Ans: True
+
 Q91: There is 99.99% SLA(Service Level Agreement) for temporary storage.
 True
 False
 Ans: False
+
 Q92: Ephemeral storage is block-level storage ?
 True
 False
 Ans: True
+
 Q93: Single object size is up to 5 TB in Amazon S3.
 True
 False
 Ans: True
+
 Q94: You can create unlimited bucket size in Amazon S3.
 True
 False
 Ans: True
+
 Q95: By default, Instance-Backed and EBS-Backed root volumes delete all data. However, when using EBS-Backed storage, you can configure it to save the data on the root volume. True or false ?
 True
 False
 Ans: True
+
 Q96: You can switch from an Instance-Backed to an EBS-Backed root volume at any time. True or False ?
 True
 False
 Ans: False
+
 Q97: When using an EBS-Backed machine, you can override the terminate option and save the root volume. True or False ?
 True
 False
 Ans: True
+
 Q98: Which of the following is a service of AWS Simple Storage Service(S3)? Select all that apply.
 Database Indexing
 File searching
 Secure Hosting
 Storage Scaling
 Ans: 3. Secure Hosting & 4. Storage Scaling
+
 Q99: What’s the difference between instance store and EBS?
 Issue
 I’m not sure whether to store the data associated with my Amazon EC2 instance in instance store or  in an attached Amazon Elastic Block Store (Amazon EBS) volume. Which option is best for me?
 Resolution
 Some Amazon EC2 instance types come with a form of directly attached, block-device storage known as the instance store. The instance store is ideal for temporary storage, because the data stored in instance store volumes is not persistent through instance stops, terminations, or hardware failures. You can find more detailed information about the instance store at Amazon EC2 Instance Store.
 For data you want to retain longer-term, or if you need to encrypt the data, we recommend using EBS volumes instead. EBS volumes preserve their data through instance stops and terminations, can be easily backed up with EBS snapshots, can be removed from instances and reattached to another, and support full-volume encryption. For more detailed information about EBS volumes, see Features of Amazon EBS.
+
 Q100: BS can be attached to any running instance that is in the same Availability Zone ?
 True
 False
 Ans: True
+
 Q101: EBS is internet accessible
 True
 False
 Ans: False
+
 Q102: EBS has persistent file system for EC2
 True
 False
 Ans: True
+
 Q103: EBS supports incremental snapshots
 True
 False
 Ans: True
+
 Q104: Amazon Glacier enables customers to offload the administrative burdens of operating and scaling storage to AWS.
 True
 False
 Ans: True
+
 Q105: Amazon Glacier is a great storage choice when low storage cost is paramount.
 True
 False
 Ans: True
+
 Q106: Data is rarely retrieved, and retrieval latency of several hours is acceptable in Glacier
 True
 False
 Ans: True
+
 Q107: Glacier is basically for data archival
 True
 False
 Ans: True
+
 Q108: It is very cheap storage
 True
 False
 Ans: True
+
 Q109: Glacier has very, very slow retrieval times
 True
 False
 Ans: True
+
 Q110: By Default, Instance-Backed and EBS-Backed root volumes delete all data. However, when using EBS-Backed storage, you can configure it to save the data on the root volume.
 True
 False
 Ans: True
+
 Q111: You can switch from an Instance-Backed to an EBS-Backed root volume at any time.
 True
 False
 Ans: False
+
 Q112: When using an EBS-Backed machine, you can override the terminate option and save the root volume.
 True
 False
 Ans: True
+
 Q113: VPC is Private, Isolated, Virtual Network
 True
 False
 Ans: True
+
 Q114: VPC would be logically isolated network in AWS cloud
 True
 False
 Ans: True
+
 Q115: VPC is also give control of network architecture
 True
 False
 Ans: True
+
 Q116: VPC is also going to enhanced security
 True
 False
 Ans: True
+
 Q117: VPC has ability to interwork with other organizations
 True
 False
 Ans: True
+
 Q118: VPC does not enable hybrid cloud(site-to-site VPN)
 True
 False
 Ans: False
+
 Q119: Route Table is a set of Rules tells the direction of network
 True
 False
 Ans: True
+
 Q120: Security Group is a subnet level of security
 True
 False
 Ans: False
+
 Q121: NACLs(Network Access Lists) is a resource level of security
 True
 False
 Ans: False
+
 Q122: Any default stack is available in Cloud Formation ?
 Ans:  You can not create default stack but you can choose the type of stack to create e.g :
 A sample stack
