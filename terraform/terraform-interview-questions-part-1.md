@@ -10,6 +10,7 @@ A console that allows users to observe functions
 The ability to translate HCL code into JSON format
 A configuration language that supports interpolation 
 A module count that keeps track of the number of modules applied to the infrastructure.
+
 3. Define IAC?
 IAC or Infrastructure as Code allows you to build, change, and manage your infrastructure through coding instead of manual processes. The configuration files are created according to your infrastructure specifications and these configurations can be edited and distributed securely within an organization.
 
@@ -25,6 +26,7 @@ terraform graph - creates a DOT-formatted graph
 terraform plan - a dry run to see what Terraform will do
 Free Azure Fundamentals Course
 Master Azure Basics in One GoENROLL NOWFree Azure Fundamentals Course
+
 5. Are callbacks possible with Terraform on Azure?
 By using the Azure Event Hubs, callbacks are probable on Azure. Terraform’s Azure supplier provides effortless functionality to users. Microsoft Azure Cloud Shell provides an already installed Terraform occurrence.
 
