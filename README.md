@@ -129,8 +129,6 @@ Each file begins with a problem statement. The rest of the file is the solution.
 + [Apache Hbase](./data/hbase.md)
 + [DWH Architectures](./data/dwha.md)
 + [Tableau](./data/tableau.md)
-+ [Kubernetes](./data/kubernetes.md)
-+ [SQL](./data/sql.md)
 + [Data Structures](./data/data-structure.md)
 
 
