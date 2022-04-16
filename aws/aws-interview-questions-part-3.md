@@ -1,19 +1,29 @@
+#AWS Interview Questions
+
 Q1: List the components required to build Amazon VPC?
 Ans: Subnet, Internet Gateway, NAT Gateway, HW VPN Connection, Virtual Private Gateway, Customer Gateway, Router, Peering Connection, VPC Endpoint for S3, Egress-only Internet Gateway.
+
 Q2: How do you safeguard your EC2 instances running in a VPC?
 Ans: Security Groups can be used to protect your EC2 instances in a VPC. We can configure both INBOUND and OUTBOUND traffic in a Security Group which enables secured access to your EC2 instances. Security Group automatically denies any unauthorized access to your EC2 instances.
+
 Q3: In a VPC how many EC2 instances can you use?
 Ans: Initially you are limited to launch 20 EC2 Instances at one time. Maximum VPC  size is 65,536 instances.
+
 Q4: Can you establish a peering connection to a VPC in a different REGION?
 Ans: Not possible. Peering Connection are available only between VPC in the same region.
+
 Q5: Can you connect your VPC with a VPC owned by another AWS account?
 Ans: Yes, Possible. Provided the owner of other VPCs accepts your connection.
+
 Q6: What are all the different connectivity options available for your VPC?
 Ans: Internet Gateway, Virtual Private Gateway, NAT, EndPoints, Peering Connections.
+
 Q7: Can a EC2 instance inside your VPC connect with the EC2 instance belonging to other VPCs?
 Ans: Yes, Possible. Provided an Internet Gateway is configured in such a way that traffic bounded for EC2 instances running in other VPCs.
+
 Q8: How can you monitor network traffic in your VPC?
 Ans: It is possible using Amazon VPC Flow-Logs feature.
+
 Q9: Difference between Security Groups and ACLs in a VPC?
 Ans: A Security Group defines which traffic is allowed TO or FROM  EC2 instance. Whereas ACL, controls at the SUBNET level, scrutinize the traffic TO or FROM a Subnet.
 Q10: Hon an EC2 instance in a VPC establish the connection with the internet?
