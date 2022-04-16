@@ -1,0 +1,418 @@
+Controlling Services and Daemons
+
+System startup and server processes are managed by the systemd System and Service Manager. 
+This program provides a method for activating system resources, server daemons, and other processes, both at boot time and on a running system.
+
+Daemons are processes that wait or run in the background performing various tasks. Generally, daemons start automatically at boot time and continue to run 
+until shutdown or until they are manually stopped. By convention, the names of many daemon programs end in the letter "d".
+
+To listen for connections, a daemon uses a socket. This is the primary communication channel with local or remote clients. Sockets may be created by daemons 
+or may be separated from the daemon and be created by another process, such as systemd. The socket is passed to the daemon when a connection is established 
+by the client.
+
+A service often refers to one or more daemons, but starting or stopping a service may instead make a one-time change to the state of the system, which does 
+not involve leaving a daemon process running afterward (called oneshot).
+
+A bit of history:-
+
+For many years, process ID 1 of Linux and UNIX systems has been the init process. This process was responsible for activating other services on the system and
+is the origin of the term "init system." Frequently used daemons were started on systems at boot time with System V and LSB init scripts. These are shell 
+scripts, and may vary from one distribution to another. Less frequently used daemons were started on demand by another service, such as initd or xinetd, 
+which listens for client connections. These systems have several limitations, which are addressed with systemd.
+
+In Red Hat Enterprise Linux 7, process ID 1 is systemd, the new init system. A few of the new features provided by systemd include:-
+
+- Parallelization capabilities, which increase the boot speed of a system.
+- On-demand starting of daemons without requiring a separate service.
+- Automatic service dependency management, which can prevent long timeouts, such as by not starting a network service when the network is not available.
+- A method of tracking related processes together by using Linux control groups.
+
+Note:- With systemd, shell-based service scripts are used only for a few legacy services. Therefore, configuration files with shell variables, such as those 
+found in /etc/sysconfig, are being replaced. Those still in use are included as systemd environment files and read as NAME=VALUE pairs. They are no longer 
+sourced as a shell script.
+
+systemctl and systemd units:-
+
+he systemctl command is used to manage different types of systemd objects, called units. A list of available unit types can be displayed with 
+
+# systemctl -t help
+Available unit types:
+service
+socket
+busname
+target
+snapshot
+device
+mount
+automount
+swap
+timer
+path
+slice
+scope
+
+Important - The systemctl may abbreviate or "ellipsize" unit names, process tree entries, and unit descriptions unless run with the -l option
+
+Some common unit types are listed below:-
+
+- Service units have a .service extension a- nd represent system services. This type of unit is used to start frequently accessed daemons, such as a web 
+server.
+- Socket units have a .socket extension and represent inter-process communication (IPC) sockets. Control of the socket will be passed to a daemon or newly 
+started service when a client connection is made. Socket units are used to delay the start of a service at boot time and to start less frequently used 
+services on demand. These are similar in principle to services which use the xinetd superserver to start on demand.
+- Path units have a .path extension and are used to delay the activation of a service until a specific file system change occurs. This is commonly used for 
+services which use spool directories, such as a printing system.
+
+Several keywords indicating the state of the service can be found in the status output:-
+
+Keyword				Description
+loaded				Unit configuration file has been processed.
+active (running)	Running with one or more continuing processes.
+active (exited)		Successfully completed a one-time configuration.
+active (waiting)	Running but waiting for an event.
+inactive			Not running.
+enabled				Will be started at boot time.
+disabled			Will not be started at boot time.
+static				Can not be enabled, but may be started by an enabled unit automatically.
+
+NOTE - The systemctl status NAME command replaces the service NAME status command used in previous versions of Red Hat Enterprise Linux.
+
+
+Listing unit files with systemctl:-
+
+- Query the state of all units to verify a system startup # systemctl
+
+- Query the state of only the service units # systemctl --type=service
+
+- Investigate any units which are in a failed or maintenance state. Optionally, add the -l option to show the full output # systemctl status rngd.service -l
+
+- The status argument may also be used to determine if a particular unit is active and show if the unit is enabled to start at boot time. 
+Alternate commands can also easily show the active and enabled states
+
+# systemctl is-active sshd
+# systemctl is-enabled sshd
+
+- List the active state of all loaded units. Optionally, limit the type of unit. The --all option will add inactive units.
+
+# systemctl list-units --type=service
+# systemctl list-units --type=service --all
+
+- View the enabled and disabled settings for all units. Optionally, limit the type of unit.
+
+# systemctl list-unit-files --type=service
+
+- View only failed services
+
+# systemctl --failed --type=service
+
+Controlling System Services:-
+
+Changes to a configuration file or other updates to a service may require that the service be restarted.
+A service that is no longer used may be stopped before removing the software. A service that is not frequently used may be manually started by an 
+administrator only when it is needed.
+
+In this example, please follow along with the next steps while your instructor demonstrates managing services on a running system
+
+View the status of a service.
+
+[root@serverX ~]# systemctl status sshd.service
+
+Verify that the process is running.
+
+[root@serverX ~]# ps -up PID
+
+Stop the service and verify the status.
+
+[root@serverX ~]# systemctl stop sshd.service
+[root@serverX ~]# systemctl status sshd.service
+
+Start the service and view the status. The process ID has changed.
+
+[root@serverX ~]# systemctl start sshd.service
+[root@serverX ~]# systemctl status sshd.service
+
+Stop, then start, the service in a single command.
+
+[root@serverX ~]# systemctl restart sshd.service
+[root@serverX ~]# systemctl status sshd.service
+
+Issue instructions for a service to read and reload its configuration file without a complete stop and start. The process ID will not change.
+
+[root@serverX ~]# systemctl reload sshd.service
+[root@serverX ~]# systemctl status sshd.service
+
+Unit Dependencies:-
+
+Services may be started as dependencies of other services. If a socket unit is enabled and the service unit with the same name is not, the service will automatically
+be started when a request is made on the network socket. Services may also be triggered by path units when a file system condition is met. For example, a file
+placed into the print spool directory will cause the cups print service to be started if it is not running. 
+
+# systemctl stop cups.service
+Warning: Stopping cups, but it can still be activated by:
+  cups.path
+  cups.socket
+
+To completely stop printing services on a system, stop all three units. Disabling the service will disable the dependencies. 
+
+The systemctl list-depdencies UNIT command can be used to print out a tree of what other units must be started if the specified unit is started. Depending on the 
+exact dependency, the other unit may need to be running before or after the specified unit starts. The --reverse option to this command will show what units need
+to have the specified unit started in order to run. 
+
+Masking services:- 
+
+At times, a system may have conflicting services installed. For example, there are multiple methods to manage networks (network and NetworkManager) and firewalls 
+(iptables and firewalld). To prevent an administrator from accidentally starting a service, that service may be masked. Masking will create a link in the 
+configuration directories so that if the service is started, nothing will happen.
+
+# systemctl mask network
+ln -s '/dev/null' '/etc/systemd/system/network.service'
+
+# systemctl unmask network
+rm '/etc/systemd/system/network.service'
+
+Enabling system daemons to start or stop at boot:-
+
+Starting a service on a running system does not guarantee that the service will be started when the system reboots. Similarly, stopping a service on a running 
+system will not keep it from starting again when the system reboots. Services are started at boot time when links are created in the appropriate systemd 
+configuration directories. These links are created and removed with systemctl commands.
+
+- View the status of a service
+
+# systemctl status sshd.service
+
+- Disable the service and verify the status. Note that disabling a service does not stop the service
+
+# systemctl disable sshd.service
+# systemctl status sshd.service
+
+- Enable the service and verify the status
+
+# systemctl enable sshd.service
+# systemctl is-enabled sshd.service
+
+Summary of systemctl commands:-
+
+Services can be started and stopped on a running system and enabled or disabled for automatic start at boot time
+
+- View detailed information about a unit state - # systemctl status UNIT
+- Stop a service on a running system - # systemctl stop UNIT
+- Start a service on a running system - # systemctl start UNIT
+- Restart a service on a running system - # systemctl restart UNIT
+- Reload configuration file of a running service - # systemctl reload UNIT
+- Completely disable a service from being started, both manually and at boot - # systemctl mask UNIT
+- Make a masked service available - # systemctl unmask UNIT
+- Configure a service to start at boot time - # systemctl enable UNIT
+- Disable a service from starting at boot time # systemctl disable UNIT
+- List units which are required and wanted by the specified unit - # systemctl list-dependencies UNIT
+
+Comparison of the Service Utility with systemctl
+	
+Service 			Systemctl				Description
+
+service name start		systemctl start name.service		Starts a service
+
+service name stop		systemctl stop name.service		Stops a service
+
+service name restart		systemctl restart name.service		Restarts a service
+
+service name condrestart	systemctl try-restart name.service	Restarts a service only if it is running
+
+service name reload		systemctl reload name.service		Reloads configuration
+
+service name status		systemctl status name.service
+				systemctl is-active name.service	Checkfs if a service is running
+
+service --status-all		systemctl list-units --type 
+				service --all				Displays the status of all services
+
+Comparison of the chkconfig Utility with systemctl
+	
+chkconfig		systemctl 				Description
+
+chkconfig name on	systemctl enable name.service		Enables a service
+
+chkconfig name off	systemctl disable name.service		Disables a service
+
+chkconfig --list name	systemctl status name.service
+			systemctl is-enabled name.service	Checks if a service is enabled
+
+chkconfig --list	systemctl list-unit-files --type
+			service					Lists all services and checks if they are enabled
+
+chkconfig --list	systemctl list-dependencies --after	Lists services that are ordered to start before the specified unit
+
+
+chkconfig --list	systemctl list-dependencies --before	Lists services that are ordered to start after the specified unit
+
+
+Comparison of SysV Runlevels with systemd Targets:-
+
+Runlevel		Target Units 		Description
+
+0			runlevel0.target,
+			poweroff.target		Shut down and power off the system
+
+1 			runlevel1.target, 
+			rescue.target		Set up a resuce shell
+
+2 			runlevel2.target,
+			multi-user.target	Set up a non-graphical multi-user system
+
+3 			runlevel3.target, 
+			multi-user.target	Set up a non-graphical multi-user system
+
+4			runlevel4.target, 
+			multi-user.target	Set up a non-graphical multi-user system
+
+5 			runlevel5.target,
+			graphical.target	Set up a graphical multi-user system
+
+6			runlevel6.target,
+			reboot.target		Shut down and reboot the system
+
+
+Comparison of SysV Init Commands with systemctl:-
+
+Old COmmand		New Command			Description
+
+runlevel		systemctl list-units --type
+			target				Lists currently loaded target units
+
+telinit runlevel	systemctl isolate name.target	Changes the current target
+
+
+To determine which target unit is used by default, run the following commands
+
+# systemctl get-default
+
+This command resolves the symbolic link located at /etc/systemd/system/default.target and displays the result
+
+TO list all currently loaded target units 
+
+# systemctl list-units --type target
+
+To configure the system to use a different target unit by default
+
+# systemctl set-default name.target
+
+Replace name with the name of the target unit you want to use by default (for example, multi-user). This command replaces the /etc/systemd/system/default.target
+file with a symbolic link to /usr/lib/systemd/system/name.target, where name is the name of the target unit you want to use.
+
+To configure the system to use the multi-user.target unit by default
+
+# systemctl set-default multi-user.target
+rm '/etc/systemd/system/default.target'
+ln -s '/usr/lib/systemd/system/multi-user.target'
+'/etc/systemd/system/default.target'
+
+Changing to Resuce mode:-
+
+Rescue mode provides a convenient single-user environment and allows you to repair your system in situations when it is unable to complete a regular booting process.
+In rescue mode, the system attempts to mount all local file systems and start some important system services, but it does not activate network interfaces or allow
+more users to be logged into the sysetm at the same time. In RedHat Enterprise Linux 7, rescue mode is equivalent to single user mode and requires the root password.
+
+To change the current target and enter rescue mode in the current session # systemctl resuce
+
+This command is similar to systemctl isolate resuce.target, but it also sends an informative message to all users that are currently logged into the system. To
+prevent systemd  from sending this messages
+
+# systemctl --no-wall rescue
+
+
+Changing to Emergency Mode:-
+
+Emergency mode provides the most minimal environment possible and allows you to repair your system even in situations when the system is unable to enter rescue mode.
+In emergency mode, the system mounts the root file system only for reading, does not attempt to mount any other local file systems, does not activate network
+interfaces, and only starts a few essential services. In Red Hat Enterprise Linux 7, emergency mode requires the root password.
+
+To change the current target and enter emergency mode # systemctl emergency
+
+This command is similar to systemctl isolate emergency.target, but it also sends an informative message to all users that are currently logged into the system. To
+prevent systemd from sending this message, run this command with the --no-wall command
+
+# systemctl --no-wall emergency
+
+
+Comparison of Power Managment Commands with  systemctl
+
+Old Command		New Command		Description
+
+halt			systemctl halt		Halts the system
+
+poweroff		systemctl poweroff	Powers off the system
+
+reboot			systemctl reboot	Restarts the system
+
+pm-suspend		systemctl suspend	Suspends the system
+
+pm-hibernate		systemctl hibernate	Hibernates the system
+
+pm-suspend-hybrid	systemctl hybrid-sleep	Hibernates and suspends the system
+
+Shutting Down the System:-
+
+The systemctl utility provides commands for shutting down the system, however the traditional shutdown command is also supported. Although the shutdown command will 
+call the systemctl utility to perform the shutdown, it has an advantage in that it also supports a time argument. This is particularly useful for scheduled 
+maintenance and to allow more time for users to react to the warning that a system shutdown has been scheduled. The option to cancel the shutdown can also be an 
+advantage.
+
+To shutdown the system and power off the machine # systemctl poweroff
+
+To shut down and halt the system without powering off the machine # systemctl halt
+
+Using the shutdown Command:-
+
+To shut down the system and power off the machine at a certain time # shutdown --poweroff hh:mm
+
+Where hh:mm is the time 24 hour clock format. The /run/nologin file is created 5 minutes before system shutdown to prevent new logins. When a time argument is used,
+an optional message, the wall message, can be appended to the command. 
+
+To shutdown and halt the system after a delay, without powering off the machine # shutdown --halt +m
+
+Where +m is the delay time in minutes. The now keyword is an alias for +0.
+
+A pending shutdown can be canceled by the root user # shutdown -c
+
+Restaring the system:-
+
+To restart the system # systemctl reboot
+
+Suspending the System:-
+
+To suspend the system # sysetmctl suspend
+
+This command saves the system state in RAM and with the exception of the RAM module, powers off most of the devices in the machine. When you turn the machine back
+on, the system then restores its state from RAM without having to boot again. Because the system state is saved in RAM and not on the hard disk, restoring the system
+from suspend mode is significantly faster than restoring it from hibernation, but as a consequence, a suspended system state is also vulnerable to power outages.
+
+Hibernating the System:-
+
+To hibernate the system # systemctl hibernate
+
+This command saves the system state on the hard disk drive and powers off the machine. When you turn the machine back on, the system then restores its states from 
+the saved data without having to boot again. Because the sysetm state is saved on the hard disk and not in RAM, the machine does not have to maintain electrical
+power to the RAM module, but as a consequence, restoring the system from hibernation is significantly slower than restoring it from suspend mode. 
+
+To hibernate and suspend the system # systemctl hybrid-sleep
+
+Controlling Systemd on a remote machine:-
+
+In addition to controlling the systemd system and service manager locally, the systemctl utility also allows you to interact with systemd running on a remote machine
+over the SSH protocol. Provided that the sshd service on the remote machine is running, you can connect to this machine by running the systemctl command with the 
+--host or -H command line option:-
+
+# systemctl --host user_name@host_name command
+
+Replace user_name with the name of the remote user, host_name with the machines host name, and command with any of the systemctl commands. Note that the remote
+machine must be configured to allow the selected user remote access over the SSH protocol. 
+
+# systemctl -H root@server status httpd.service
+
+
+
+
+
+
+
+
+
