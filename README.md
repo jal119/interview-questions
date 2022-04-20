@@ -85,6 +85,26 @@ We collate the information in this repository through students submissions , if 
 <!-- prettier-ignore-end -->
 <!-- ALL-TOPICS-LIST:END -->
 
+# DevOps
+
+<!-- ALL-TOPICS-LIST:START -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<center>
+<table>
+  <tr>
+    <td align="center"><a href="/devops/readme.md"><img src="image/solution-architect.png" width="70px;" height="75px;" alt="Assesment" /><br /><b>Assesment</b></a></td>
+   
+  </tr>
+  
+</table>
+</center>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-TOPICS-LIST:END -->
+
+
+
 # Solution Architect
 
 <!-- ALL-TOPICS-LIST:START -->
