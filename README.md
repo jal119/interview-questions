@@ -15,6 +15,25 @@ We collate the information in this repository through students submissions , if 
 
 ## Interview Questions
 
+# Linux
+
+<!-- ALL-TOPICS-LIST:START -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<center>
+<table>
+  <tr>
+    <td align="center"><a href="/linux/readme.md"><img src="images/linux.png" width="70px;" height="75px;" alt="Linux" /><br /><b>Linux</b></a></td>
+   
+  </tr>
+  
+</table>
+</center>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-TOPICS-LIST:END -->
+
+
 # Cloud
 
 <!-- ALL-TOPICS-LIST:START -->
@@ -53,7 +72,96 @@ We collate the information in this repository through students submissions , if 
 <!-- prettier-ignore-end -->
 <!-- ALL-TOPICS-LIST:END -->
 
+# DevOps - Automation
 
+<!-- ALL-TOPICS-LIST:START -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<center>
+<table>
+  <tr>
+    <td align="center"><a href="/ansible/readme.md"><img src="images/ansible.png" width="70px;" height="75px;" alt="Ansible" /><br /><b>Ansible</b></a></td>
+	<td align="center"><a href="/terraform/readme.md"><img src="images/terraform.png" width="70px;" height="75px;" alt="Terraform" /><br /><b>terraform</b></a></td>
+   
+  </tr>
+  
+</table>
+</center>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-TOPICS-LIST:END -->
+
+# Docker
+
+<!-- ALL-TOPICS-LIST:START -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<center>
+<table>
+  <tr>
+    <td align="center"><a href="/docker/readme.md"><img src="images/docker.png" width="70px;" height="75px;" alt="Docker" /><br /><b>Docker</b></a></td>
+   
+  </tr>
+  
+</table>
+</center>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-TOPICS-LIST:END -->
+
+# Kubernetes
+
+<!-- ALL-TOPICS-LIST:START -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<center>
+<table>
+  <tr>
+    <td align="center"><a href="/kubernetes/readme.md"><img src="images/kubernetes.png" width="70px;" height="75px;" alt="Kubernetes" /><br /><b>Kubernetes</b></a></td>
+   
+  </tr>
+  
+</table>
+</center>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-TOPICS-LIST:END -->
+
+# Python - Automation
+
+<!-- ALL-TOPICS-LIST:START -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<center>
+<table>
+  <tr>
+    <td align="center"><a href="/python/readme.md"><img src="images/python.png" width="70px;" height="75px;" alt="Python" /><br /><b>Python</b></a></td>
+   
+  </tr>
+  
+</table>
+</center>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-TOPICS-LIST:END -->
+
+# Data
+
+<!-- ALL-TOPICS-LIST:START -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<center>
+<table>
+  <tr>
+    <td align="center"><a href="/data/readme.md"><img src="images/data.png" width="70px;" height="75px;" alt="Data" /><br /><b>Data</b></a></td>
+   
+  </tr>
+  
+</table>
+</center>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-TOPICS-LIST:END -->
 
 # Solution Architect
 
