@@ -23,7 +23,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/linux/readme.md"><img src="images/linux.png" width="70px;" height="75px;" alt="Linux" /><br /><b>Linux</b></a></td>
+    <td align="center"><a href="/linux/readme.md"><img src="image/linux.png" width="70px;" height="75px;" alt="Linux" /><br /><b>Linux</b></a></td>
    
   </tr>
   
@@ -42,8 +42,8 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/aws/README.md"><img src="images/aws.png" width="70px;" height="75px;" alt="AWS" /><br /><b>AWS</b></a></td>
-    <td align="center"><a href="/azure/README.md"><img src="images/azure.png" width="85px;" height="85px;" alt="AZURE"/><br /><b>AZURE</b></a></td>
+    <td align="center"><a href="/aws/README.md"><img src="image/aws.png" width="70px;" height="75px;" alt="AWS" /><br /><b>AWS</b></a></td>
+    <td align="center"><a href="/azure/README.md"><img src="image/azure.png" width="85px;" height="85px;" alt="AZURE"/><br /><b>AZURE</b></a></td>
 
 
   </tr>
@@ -62,7 +62,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/devops/readme.md"><img src="images/devops.png" width="70px;" height="75px;" alt="DevOps" /><br /><b>DevOps</b></a></td>
+    <td align="center"><a href="/devops/readme.md"><img src="image/devops.png" width="70px;" height="75px;" alt="DevOps" /><br /><b>DevOps</b></a></td>
    
   </tr>
   
@@ -80,8 +80,8 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/ansible/readme.md"><img src="images/ansible.png" width="70px;" height="75px;" alt="Ansible" /><br /><b>Ansible</b></a></td>
-	<td align="center"><a href="/terraform/readme.md"><img src="images/terraform.png" width="70px;" height="75px;" alt="Terraform" /><br /><b>terraform</b></a></td>
+    <td align="center"><a href="/ansible/readme.md"><img src="image/ansible.png" width="70px;" height="75px;" alt="Ansible" /><br /><b>Ansible</b></a></td>
+	<td align="center"><a href="/terraform/readme.md"><img src="image/terraform.png" width="70px;" height="75px;" alt="Terraform" /><br /><b>terraform</b></a></td>
    
   </tr>
   
@@ -99,7 +99,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/docker/readme.md"><img src="images/docker.png" width="70px;" height="75px;" alt="Docker" /><br /><b>Docker</b></a></td>
+    <td align="center"><a href="/docker/readme.md"><img src="image/docker.png" width="70px;" height="75px;" alt="Docker" /><br /><b>Docker</b></a></td>
    
   </tr>
   
@@ -117,7 +117,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/kubernetes/readme.md"><img src="images/kubernetes.png" width="70px;" height="75px;" alt="Kubernetes" /><br /><b>Kubernetes</b></a></td>
+    <td align="center"><a href="/kubernetes/readme.md"><img src="image/kubernetes.png" width="70px;" height="75px;" alt="Kubernetes" /><br /><b>Kubernetes</b></a></td>
    
   </tr>
   
@@ -135,7 +135,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/python/readme.md"><img src="images/python.png" width="70px;" height="75px;" alt="Python" /><br /><b>Python</b></a></td>
+    <td align="center"><a href="/python/readme.md"><img src="image/python.png" width="70px;" height="75px;" alt="Python" /><br /><b>Python</b></a></td>
    
   </tr>
   
@@ -153,7 +153,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/data/readme.md"><img src="images/data.png" width="70px;" height="75px;" alt="Data" /><br /><b>Data</b></a></td>
+    <td align="center"><a href="/data/readme.md"><img src="image/data.png" width="70px;" height="75px;" alt="Data" /><br /><b>Data</b></a></td>
    
   </tr>
   
