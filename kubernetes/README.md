@@ -1,17 +1,17 @@
 # kubernetes Interview Questions
 
-+ [Kubernetes Insights Glance](./k8s/kubernetes-workshop.md)
-+ [Kubernetes Interview Questions Part1](./k8s/k8s-interview-questions-part-1.md)
-+ [Kubernetes Interview Questions Part2](./k8s/k8s-interview-questions-part-2.md)
-+ [Kubernetes Commands - Just Glance](./k8s/kubernetes-commands.md)
-+ [How It's Works](./k8s/how-kubernetes-works.md)
-+ [Revisit Cron Jobs](./k8s/kuberenets-cronjobs.md)
-+ [Deep Dive Concepts](./k8s/kubernetes-concepts.md)
-+ [Refresh admin commands](./k8s/kubernetes-commands-1.md)
-+ [k8s Deployment Glance](./k8s/kubernetes-deployment-tutorial.md)
-+ [Refresh volume admin Skill](./k8s/persistent-volume.md)
-+ [7 Assessment exercises ](./k8s/exercises)
-+ [7 Assessment Answers ](./k8s/solutions)
++ [Kubernetes Insights Glance](/kubernetes/kubernetes-workshop.md)
++ [Kubernetes Interview Questions Part1](/kubernetes/k8s-interview-questions-part-1.md)
++ [Kubernetes Interview Questions Part2](/kubernetes/k8s-interview-questions-part-2.md)
++ [Kubernetes Commands - Just Glance](/kubernetes/kubernetes-commands.md)
++ [How It's Works](/kubernetes/how-kubernetes-works.md)
++ [Revisit Cron Jobs](/kubernetes/kuberenets-cronjobs.md)
++ [Deep Dive Concepts](/kubernetes/kubernetes-concepts.md)
++ [Refresh admin commands](/kubernetes/kubernetes-commands-1.md)
++ [k8s Deployment Glance](/kubernetes/kubernetes-deployment-tutorial.md)
++ [Refresh volume admin Skill](/kubernetes/persistent-volume.md)
++ [7 Assessment exercises ](/kubernetes/exercises)
++ [7 Assessment Answers ](/kubernetes/solutions)
 
 
 
