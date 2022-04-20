@@ -135,7 +135,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/python/readme.md"><img src="image/python.png" width="70px;" height="75px;" alt="Python" /><br /><b>Python</b></a></td>
+    <td align="center"><a href="/python/README.md"><img src="image/python.png" width="70px;" height="75px;" alt="Python" /><br /><b>Python</b></a></td>
    
   </tr>
   
@@ -153,7 +153,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/data/readme.md"><img src="image/data.jpg" width="70px;" height="75px;" alt="Data" /><br /><b>Data</b></a></td>
+    <td align="center"><a href="/data/README.md"><img src="image/data.jpg" width="70px;" height="75px;" alt="Data" /><br /><b>Data</b></a></td>
    
   </tr>
   
@@ -171,8 +171,8 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/solution-architect/readme.md"><img src="image/solution-architect.png" width="70px;" height="75px;" alt="Assesment" /><br /><b>Assesment</b></a></td>
-	<td align="center"><a href="/solution-architect/readme.md"><img src="image/solution-architect-technology.png" width="70px;" height="75px;" alt="Technology" /><br /><b>Technology</b></a></td>
+    <td align="center"><a href="/solution-architect/README.md"><img src="image/solution-architect.png" width="70px;" height="75px;" alt="Assesment" /><br /><b>Assesment</b></a></td>
+	<td align="center"><a href="/solution-architect/README.md"><img src="image/solution-architect-technology.png" width="70px;" height="75px;" alt="Technology" /><br /><b>Technology</b></a></td>
     
   </tr>
   
