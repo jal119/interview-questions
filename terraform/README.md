@@ -1,7 +1,7 @@
 
 # Terraform Interview Questions
 
-+ [Terraform Interview Questions Set 1](./terraform/terraform-interview-questions-part-1.md)
++ [Terraform Interview Questions Set 1](/terraform/terraform-interview-questions-part-1.md)
 
 ### Find All Cloud/DevOps Architect Trainings with Step-by-Step Handson with Use cases:
 - Click below Picture 👇

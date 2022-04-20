@@ -3,8 +3,8 @@
 
 # Ansible
 
-+ [50 Ansible Assesments ](./ansible/50-ansible-tasks.md)
-+ [100 Ansible realtime-playbooks ](./ansible/playbooks)
++ [50 Ansible Assesments ](/ansible/50-ansible-tasks.md)
++ [100 Ansible realtime-playbooks ](/ansible/playbooks)
 
 
 ### Find All Cloud/DevOps Architect Trainings with Step-by-Step Handson with Use cases:
