@@ -62,7 +62,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/devops/readme.md"><img src="image/devops.png" width="70px;" height="75px;" alt="DevOps" /><br /><b>DevOps</b></a></td>
+    <td align="center"><a href="/devops/README.md"><img src="image/devops.png" width="70px;" height="75px;" alt="DevOps" /><br /><b>DevOps</b></a></td>
    
   </tr>
   
