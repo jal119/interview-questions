@@ -1,7 +1,7 @@
 # Docker Container Interview Questions
 
-+ [7 Assessment exercises ](./docker/exercises)
-+ [7 Assessment Answers ](./docker/solutions)
++ [7 Assessment exercises ](/docker/exercises)
++ [7 Assessment Answers ](/docker/solutions)
 
 
 
