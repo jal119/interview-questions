@@ -1,9 +1,9 @@
 # DevOps
 
-+ [DevOps Guide - Tools - HighLevel](./devops/DevOps-Guide.md)
-+ [Validate yourself before interview](./devops/devops-hands-on-path.md)
-+ [Validate yourself Self-Assesment](./devops/DevOps-Engineer-assignment.md)
-+ [Validate yourself Deep Glance](./devops/DevOps-Deep-Glance-Again.md)
++ [DevOps Guide - Tools - HighLevel](/devops/DevOps-Guide.md)
++ [Validate yourself before interview](/devops/devops-hands-on-path.md)
++ [Validate yourself Self-Assesment](/devops/DevOps-Engineer-assignment.md)
++ [Validate yourself Deep Glance](/devops/DevOps-Deep-Glance-Again.md)
 
 
 ### Find All Cloud/DevOps Architect Trainings with Step-by-Step Handson with Use cases:
