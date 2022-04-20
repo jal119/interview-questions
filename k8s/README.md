@@ -1,8 +1,17 @@
-# Docker Container Interview Questions
+# kubernetes Interview Questions
 
-+ [7 Assessment exercises ](/docker/exercises)
-+ [7 Assessment Answers ](/docker/solutions)
-
++ [Kubernetes Insights Glance](./k8s/kubernetes-workshop.md)
++ [Kubernetes Interview Questions Part1](./k8s/k8s-interview-questions-part-1.md)
++ [Kubernetes Interview Questions Part2](./k8s/k8s-interview-questions-part-2.md)
++ [Kubernetes Commands - Just Glance](./k8s/kubernetes-commands.md)
++ [How It's Works](./k8s/how-kubernetes-works.md)
++ [Revisit Cron Jobs](./k8s/kuberenets-cronjobs.md)
++ [Deep Dive Concepts](./k8s/kubernetes-concepts.md)
++ [Refresh admin commands](./k8s/kubernetes-commands-1.md)
++ [k8s Deployment Glance](./k8s/kubernetes-deployment-tutorial.md)
++ [Refresh volume admin Skill](./k8s/persistent-volume.md)
++ [7 Assessment exercises ](./k8s/exercises)
++ [7 Assessment Answers ](./k8s/solutions)
 
 
 
