@@ -153,7 +153,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/data/readme.md"><img src="image/data.png" width="70px;" height="75px;" alt="Data" /><br /><b>Data</b></a></td>
+    <td align="center"><a href="/data/readme.md"><img src="image/data.jpg" width="70px;" height="75px;" alt="Data" /><br /><b>Data</b></a></td>
    
   </tr>
   
