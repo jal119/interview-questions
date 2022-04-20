@@ -4,7 +4,7 @@
 
 # Solution Architect 
 
-+ [What need to be looked upon for any project before any solutioning ](./solution-architect/architecture.md)
++ [What need to be looked upon for any project before any solutioning ](./solution-architect/assesment/architecture.md)
 + [What kind of analysis need to be asked from a business context point of view before any solutioning ](./solution-architect/business-context.md)
 + [What kind of assessment and needed while engaging any partnership approach as part of any solutioning ](./solution-architect/partnership.md)
 + [As part of any project solutioning what are all need to be asked ](./solution-architect/project.md)
