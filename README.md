@@ -80,8 +80,8 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/ansible/readme.md"><img src="image/ansible.png" width="70px;" height="75px;" alt="Ansible" /><br /><b>Ansible</b></a></td>
-	<td align="center"><a href="/terraform/readme.md"><img src="image/terraform.png" width="70px;" height="75px;" alt="Terraform" /><br /><b>terraform</b></a></td>
+    <td align="center"><a href="/ansible/README.md"><img src="image/ansible.png" width="70px;" height="75px;" alt="Ansible" /><br /><b>Ansible</b></a></td>
+	<td align="center"><a href="/terraform/README.md"><img src="image/terraform.png" width="70px;" height="75px;" alt="Terraform" /><br /><b>terraform</b></a></td>
    
   </tr>
   
