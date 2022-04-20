@@ -2,7 +2,7 @@
 
 # Azure Cloud
 
-+ [AZURE Cloud Assessment 1](./azure/azure-interview-questions-part-1.md)
++ [AZURE Cloud Assessment 1](./azure-interview-questions-part-1.md)
 
 
 
