@@ -1,15 +1,15 @@
-# AWS Solution Architect - Cloud Questions
+[![Watch the video](/image/cloudnloud.png)](https://linkedin.com/in/vijaystack)
 
-+ [AWS Simple Questions](./aws/aws-interview-questions-part-1.md)
-+ [AWS Deep Dive Questions](./aws/aws-interview-questions-part-2.md)
-+ [AWS Use Case Assesment 1 ](./aws/Aws-Use-case-Testing-1.md)
-+ [AWS 50 Assessment exercises ](./aws/exercises)
-+ [AWS 50 Assessment Answers ](./aws/solutions)
+# Azure Cloud
+
++ [AZURE Cloud Assessment 1](./azure/azure-interview-questions-part-1.md)
+
+
 
 ### Find All Cloud/DevOps Architect Trainings with Step-by-Step Handson with Use cases:
 - Click below Picture 👇
 
-[![Watch the video](/image/youtube-trainings.png)](https://www.youtube.com/channel/cloudnloud)
+[![Watch the video](./image/youtube-trainings.png)](https://www.youtube.com/channel/cloudnloud)
 
 <h3 align="left">Connect with Me:</h3>
 <a href="https://linkedin.com/in/vijaystack" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="cloudnloud" height="30" width="40" /></a>
