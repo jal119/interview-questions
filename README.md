@@ -23,7 +23,7 @@ We collate the information in this repository through students submissions , if 
 <center>
 <table>
   <tr>
-    <td align="center"><a href="/linux/readme.md"><img src="image/linux.png" width="70px;" height="75px;" alt="Linux" /><br /><b>Linux</b></a></td>
+    <td align="center"><a href="/linux/README.md"><img src="image/linux.png" width="70px;" height="75px;" alt="Linux" /><br /><b>Linux</b></a></td>
    
   </tr>
   
