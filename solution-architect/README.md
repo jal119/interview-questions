@@ -13,11 +13,11 @@
 
 # Solution Architect - Technology
 
-+ [In any kubernetes project what needs to be asked ](./solution-architect/technology/compute/kubernetes.md)
-+ [In any BlockChain project what needs to be asked ](./solution-architect/technology/compute/blockchain.md)
-+ [In any batchprocessing project what needs to be asked ](./solution-architect/technology/compute/batch.md)
-+ [In any DataBase migration project what needs to be asked ](./solution-architect/technology/database/database.md)
-+ [In any Data project what needs to be asked ](./solution-architect/technology/data/azure-data-lake.md)
++ [In any kubernetes project what needs to be asked ](/solution-architect/technology/compute/kubernetes.md)
++ [In any BlockChain project what needs to be asked ](/solution-architect/technology/compute/blockchain.md)
++ [In any batchprocessing project what needs to be asked ](/solution-architect/technology/compute/batch.md)
++ [In any DataBase migration project what needs to be asked ](/solution-architect/technology/database/database.md)
++ [In any Data project what needs to be asked ](/solution-architect/technology/data/azure-data-lake.md)
 
 
 ### Find All Cloud/DevOps Architect Trainings with Step-by-Step Handson with Use cases:
