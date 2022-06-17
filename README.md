@@ -25,9 +25,6 @@ We collate the information in this repository through students submissions , if 
   <tr>
     <td align="center"><a href="/linux/README.md"><img src="image/linux.png" width="70px;" height="75px;" alt="Linux" /><br /><b>Linux</b></a></td>
    
-  </tr>
-  
-    <tr>
     <td align="center"><a href="/linux/README.md"><img src="image/linux.png" width="70px;" height="75px;" alt="Linux" /><br /><b>Linux</b></a></td>
    
   </tr>
